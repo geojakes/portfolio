@@ -103,4 +103,42 @@
       closeMenu();
     }
   });
+
+  // --- Cursor Glow Effect ---
+  // Only on non-touch devices
+  if (window.matchMedia('(pointer: fine)').matches) {
+    const glow = document.createElement('div');
+    glow.classList.add('cursor-glow');
+    document.body.appendChild(glow);
+
+    let mouseX = -200;
+    let mouseY = -200;
+    let currentX = -200;
+    let currentY = -200;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    }, { passive: true });
+
+    function animateGlow() {
+      currentX += (mouseX - currentX) * 0.15;
+      currentY += (mouseY - currentY) * 0.15;
+      glow.style.transform = `translate(${currentX - 200}px, ${currentY - 200}px)`;
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+  }
+
+  // --- Project Card Spotlight Effect ---
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--spotlight-x', x + 'px');
+      card.style.setProperty('--spotlight-y', y + 'px');
+    });
+  });
 })();
