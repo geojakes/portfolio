@@ -124,6 +124,12 @@ strong {
   padding: var(--space-5xl) 0;
 }
 
+@media (min-width: 769px) {
+  .section {
+    padding: 7rem 0;
+  }
+}
+
 .section__title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
@@ -351,10 +357,16 @@ strong {
 }
 
 .hero__title {
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  color: var(--text-secondary);
-  margin-top: var(--space-sm);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--accent-hover);
+  margin-top: var(--space-lg);
   font-weight: 500;
+  display: inline-block;
+  padding: 0.35rem 1.25rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-xl);
+  background: rgba(99, 102, 241, 0.06);
+  letter-spacing: 0.02em;
 }
 
 .hero__tagline {
@@ -551,8 +563,14 @@ strong {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-card {
@@ -605,9 +623,15 @@ strong {
 }
 
 .project-card__title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
+  transition: color var(--transition-fast);
+}
+
+.project-card:hover .project-card__title {
+  color: var(--accent-hover);
 }
 
 .project-card__desc {
@@ -757,14 +781,25 @@ strong {
    ============================================ */
 
 .footer {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-3xl) 0 var(--space-2xl);
   text-align: center;
   border-top: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
 }
 
 .footer p {
   font-size: 0.8rem;
   color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.footer a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer a:hover {
+  color: var(--accent);
 }
 
 /* ============================================
@@ -874,6 +909,14 @@ strong {
 
   .hero__name {
     font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  .cursor-glow {
+    display: none;
   }
 }
 
@@ -1076,5 +1119,74 @@ button:focus-visible {
 
   .exp-card__date {
     font-size: 0.75rem;
+  }
+}
+
+/* ============================================
+   Cursor Glow & Card Spotlight
+   ============================================ */
+
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  will-change: transform;
+}
+
+/* Card internal spotlight on hover */
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(
+    300px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+    rgba(99, 102, 241, 0.06) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* ============================================
+   Smooth page transitions & extra animation
+   ============================================ */
+
+/* Staggered hero entrance */
+.hero__content.visible .hero__greeting {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+.hero__content.visible .hero__name {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+.hero__content.visible .hero__title {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+.hero__content.visible .hero__tagline {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+.hero__content.visible .hero__cta {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
