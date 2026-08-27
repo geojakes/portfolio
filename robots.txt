@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://georgejacob.ca/sitemap.xml

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — George Jacob</title>
+  <meta name="description" content="This page doesn't exist. Head back to georgejacob.ca.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0a0a0f">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .notfound__glow {
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .notfound__inner { position: relative; max-width: 34rem; }
+    .notfound__code {
+      font-family: var(--font-mono);
+      font-size: clamp(4rem, 14vw, 7rem);
+      font-weight: 500;
+      line-height: 1;
+      color: var(--accent);
+      letter-spacing: -0.04em;
+    }
+    .notfound__title {
+      margin-top: var(--space-lg);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .notfound__text {
+      margin-top: var(--space-md);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .notfound__actions {
+      margin-top: var(--space-2xl);
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="notfound">
+    <div class="notfound__glow"></div>
+    <div class="notfound__inner">
+      <p class="notfound__code">404</p>
+      <h1 class="notfound__title">This page doesn&rsquo;t exist</h1>
+      <p class="notfound__text">The link may be out of date or slightly mistyped. Everything lives on the home page &mdash; work, experience, and how to get in touch.</p>
+      <div class="notfound__actions">
+        <a href="/" class="btn btn--primary">Back to Home</a>
+        <a href="/#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

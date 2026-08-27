@@ -6,21 +6,36 @@
   'use strict';
 
   // --- Scroll Reveal ---
+  // Every content section starts at opacity:0 and is revealed on scroll, so if
+  // the observer is unavailable or throws we must reveal everything up front —
+  // otherwise the page renders blank below the hero.
   const revealElements = document.querySelectorAll('.reveal');
 
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
+  const revealAll = () => {
+    revealElements.forEach((el) => el.classList.add('visible'));
+  };
 
-  revealElements.forEach((el) => revealObserver.observe(el));
+  if (!('IntersectionObserver' in window)) {
+    revealAll();
+  } else {
+    try {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+    } catch (err) {
+      revealAll();
+    }
+  }
 
   // --- Sticky Nav ---
   const nav = document.getElementById('nav');
