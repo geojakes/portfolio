@@ -716,6 +716,30 @@ strong {
    Writing & Research
    ============================================ */
 
+.writing__group-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.writing__group-note {
+  max-width: 70ch;
+  margin: calc(var(--space-lg) * -1) 0 var(--space-xl);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.writing-item__quote {
+  margin-top: var(--space-md);
+}
+
+.writing__list + .writing__group-title {
+  margin-top: var(--space-3xl);
+}
+
 .writing__list {
   display: flex;
   flex-direction: column;
