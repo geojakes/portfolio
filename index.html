@@ -124,7 +124,7 @@
         "@type": "WebPage",
         "@id": "https://georgejacob.ca/#cited-trunk",
         "url": "https://trunk.io/",
-        "name": "Trunk.io — customer testimonial",
+        "name": "Trunk Merge",
         "publisher": { "@type": "Organization", "name": "Trunk.io" },
         "mentions": { "@id": "https://georgejacob.ca/#person" }
       },
@@ -475,6 +475,10 @@
             </div>
             <h3 class="project-card__title">AI Engineering-Productivity Strategy</h3>
             <p class="project-card__desc">Authored Faire's multi-quarter AI engineering-productivity strategy — a build/wrap/buy investment framework and a capability-based roadmap that composes vendor AI tools and internal systems into one end-to-end workflow, including the build-vs-buy thesis for the autonomous-agent platform.</p>
+            <a class="project-card__source" href="https://claude.com/blog/run-claude-code-sessions-on-your-own-compute" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>Anthropic — self-hosted environments for Claude Code</span>
+            </a>
             <div class="project-card__tags">
               <span class="tag">Technical Strategy</span>
               <span class="tag">AI Tooling</span>
@@ -573,38 +577,11 @@
       </div>
     </section>
 
-    <!-- Writing & Collaborations -->
+    <!-- Writing & Research -->
     <section class="section writing" id="writing">
       <div class="container">
-        <h2 class="section__title reveal">Writing &amp; Collaborations</h2>
+        <h2 class="section__title reveal">Writing &amp; Research</h2>
 
-        <h3 class="writing__group-title reveal">Collaborations</h3>
-        <p class="writing__group-note reveal">Platforms built by other teams that we adopted at Faire, and the feedback I gave them along the way.</p>
-        <div class="writing__list reveal">
-
-          <article class="writing-item">
-            <span class="tag writing-item__kind">Anthropic</span>
-            <div class="writing-item__body">
-              <h4 class="writing-item__title">Self-hosted environments for Claude Code — built by Anthropic</h4>
-              <blockquote class="writing-item__quote">Self-hosted environments let us integrate Claude Code into our existing development workflows while maintaining our security and operational controls. This setup means Claude can generate PRs, help fix CI issues, and respond to developer workflow events, with compute that can scale based on demand. Claude understands our codebase, making it a strong fit for how our engineering teams build.</blockquote>
-              <p class="writing-item__attr">George Jacob, Senior Engineering Manager, Faire</p>
-              <a class="writing-item__link" href="https://claude.com/blog/run-claude-code-sessions-on-your-own-compute" target="_blank" rel="noopener noreferrer">Self-hosted environments for Claude Code — Anthropic, August 2026</a>
-            </div>
-          </article>
-
-          <article class="writing-item">
-            <span class="tag writing-item__kind">Trunk.io</span>
-            <div class="writing-item__body">
-              <h4 class="writing-item__title">Trunk Merge — built by Trunk.io</h4>
-              <blockquote class="writing-item__quote">Trunk Merge was a winner for us because something that used to take 30 minutes can be replaced with something that takes two.</blockquote>
-              <p class="writing-item__attr">George Jacob, Sr. Software Engineer @ Faire</p>
-              <a class="writing-item__link" href="https://trunk.io/" target="_blank" rel="noopener noreferrer">Trunk.io — customer testimonial</a>
-            </div>
-          </article>
-
-        </div>
-
-        <h3 class="writing__group-title reveal">Writing &amp; research</h3>
         <div class="writing__list reveal">
 
           <article class="writing-item">
@@ -613,6 +590,7 @@
               <h3 class="writing-item__title">How merge queues helped us stabilize our main branch</h3>
               <p class="writing-item__desc">George Jacob on how Faire cut a main branch that was broken roughly 23% of the time — about 40 hours of lost developer time a month — down to a stable trunk, by queueing pull requests behind only the changes that touch the same code.</p>
               <a class="writing-item__link" href="https://craft.faire.com/how-merge-queues-helped-us-stabilize-our-main-branch-081a50bc85b2" target="_blank" rel="noopener noreferrer">The Craft — Faire's engineering blog</a>
+              <p class="writing-item__credit">Built on <a href="https://trunk.io/" target="_blank" rel="noopener noreferrer">Trunk Merge</a>, by Trunk.io.</p>
             </div>
           </article>
 

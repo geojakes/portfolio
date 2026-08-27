@@ -716,29 +716,25 @@ strong {
    Writing & Research
    ============================================ */
 
-.writing__group-title {
+
+.writing-item__credit {
+  margin-top: var(--space-sm);
   font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: var(--text-muted);
-  margin-bottom: var(--space-lg);
 }
 
-.writing__group-note {
-  max-width: 70ch;
-  margin: calc(var(--space-lg) * -1) 0 var(--space-xl);
-  font-size: 0.9rem;
+.writing-item__credit a {
   color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.writing-item__quote {
-  margin-top: var(--space-md);
+.writing-item__credit a:hover {
+  color: var(--accent-hover);
 }
 
-.writing__list + .writing__group-title {
-  margin-top: var(--space-3xl);
-}
+
+
 
 .writing__list {
   display: flex;
@@ -768,20 +764,7 @@ strong {
   white-space: nowrap;
 }
 
-.writing-item__quote {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--text-primary);
-  border-left: 2px solid var(--border-hover);
-  padding-left: var(--space-lg);
-}
 
-.writing-item__attr {
-  margin-top: var(--space-md);
-  padding-left: var(--space-lg);
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
 
 .writing-item__title {
   font-size: 1.05rem;
