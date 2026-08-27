@@ -39,9 +39,12 @@
     George Jacob apart from every other one: the `sameAs` list below is the
     signal that merges these profiles into a single entity.
 
-    TODO: add your Google Scholar and/or ORCID URL to `sameAs` — academic
-    profiles are high-authority identity signals. Same for any X/Twitter or
-    writing-platform profile you publish under this name.
+    The Google Scholar profile publishes under "George Poothicottu Jacob",
+    hence `alternateName` — it tells Google the two name strings are one
+    person rather than two.
+
+    TODO: add an ORCID iD to `sameAs` if you have one, plus any X/Twitter or
+    writing-platform profile you publish under either name.
   -->
   <script type="application/ld+json">
   {
@@ -53,6 +56,7 @@
         "name": "George Jacob",
         "givenName": "George",
         "familyName": "Jacob",
+        "alternateName": "George Poothicottu Jacob",
         "url": "https://georgejacob.ca/",
         "image": {
           "@type": "ImageObject",
@@ -99,7 +103,8 @@
         "knowsLanguage": ["English", "Malayalam"],
         "sameAs": [
           "https://www.linkedin.com/in/georgepjacob",
-          "https://github.com/geojakes"
+          "https://github.com/geojakes",
+          "https://scholar.google.com/citations?user=81fERxcAAAAJ"
         ]
       },
       {
@@ -207,6 +212,18 @@
         <h2 class="section__title reveal">About Me</h2>
         <div class="about__grid reveal">
           <div class="about__text">
+            <figure class="about__portrait">
+              <img
+                class="about__portrait-img"
+                src="/assets/george-jacob-280.jpg"
+                srcset="/assets/george-jacob-280.jpg 280w, /assets/george-jacob-420.jpg 420w"
+                sizes="140px"
+                width="140"
+                height="140"
+                loading="lazy"
+                decoding="async"
+                alt="Portrait of George Jacob, Senior Engineering Manager at Faire">
+            </figure>
             <p>I'm an engineering leader based in <strong>Waterloo, Canada</strong>, currently a <strong>Senior Engineering Manager at Faire</strong>. I'm deeply passionate about developer productivity at scale — the idea that the right tools, infrastructure, and teams can unlock an entire organization's potential.</p>
             <p>Whether it's architecting autonomous coding agents that reshape engineering workflows, leading the rollout of cloud environments that make onboarding instant, or setting the strategy that steers how an org adopts AI tooling — I'm happiest when I'm removing friction and making complex things feel simple. The throughline across my work has stayed the same as I've grown from hands-on platform engineer to engineering manager: developer productivity at scale.</p>
             <p>I hold an M.A.Sc. from the <strong>University of Waterloo</strong> and a B.Tech from <strong>NIT Calicut</strong>. That research background taught me to dig deep into problems, while building at scale at Faire and <strong>Magnet Forensics</strong> taught me to ship with impact — and now to scale that impact through teams and strategy.</p>
@@ -343,6 +360,10 @@
             </div>
             <h3 class="project-card__title">Samurai — Autonomous Coding Agent</h3>
             <p class="project-card__desc">Architected and own Faire's in-house autonomous coding-agent platform (publicly cited as "Samurai" in Cursor's case study) — a vendor-agnostic background executor that runs engineering tasks autonomously across repositories. Later set the build-vs-buy strategy to migrate onto maturing vendor tooling.</p>
+            <a class="project-card__source" href="https://craft.faire.com/faires-agentic-development-culture-7aeb03f04bcb" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>Faire's engineering blog on its agentic development culture</span>
+            </a>
             <div class="project-card__tags">
               <span class="tag">AI Agents</span>
               <span class="tag">LLMs</span>
