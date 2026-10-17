@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
+# The wildcard above already permits AI crawlers. These entries document that
+# intent explicitly so a future edit to the wildcard cannot silently cut off
+# grounding for generative search.
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://georgejacob.ca/sitemap.xml

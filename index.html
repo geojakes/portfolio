@@ -105,7 +105,56 @@
           "https://www.linkedin.com/in/georgepjacob",
           "https://github.com/geojakes",
           "https://scholar.google.com/citations?user=81fERxcAAAAJ"
+        ],
+        "subjectOf": [
+          { "@id": "https://georgejacob.ca/#cited-anthropic" },
+          { "@id": "https://georgejacob.ca/#cited-trunk" }
         ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://georgejacob.ca/#cited-anthropic",
+        "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+        "headline": "Self-hosted environments for Claude Code",
+        "datePublished": "2026-08-06",
+        "publisher": { "@type": "Organization", "name": "Anthropic" },
+        "mentions": { "@id": "https://georgejacob.ca/#person" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://georgejacob.ca/#cited-trunk",
+        "url": "https://trunk.io/",
+        "name": "Trunk Merge",
+        "publisher": { "@type": "Organization", "name": "Trunk.io" },
+        "mentions": { "@id": "https://georgejacob.ca/#person" }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://georgejacob.ca/#article-merge-queues",
+        "url": "https://craft.faire.com/how-merge-queues-helped-us-stabilize-our-main-branch-081a50bc85b2",
+        "headline": "How merge queues helped us stabilize our main branch",
+        "author": { "@id": "https://georgejacob.ca/#person" },
+        "publisher": { "@type": "Organization", "name": "The Craft — Faire Engineering" }
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://georgejacob.ca/#paper-hololens",
+        "name": "A HoloLens Framework for Augmented Reality Applications in Breast Cancer Surgery",
+        "author": { "@id": "https://georgejacob.ca/#person" },
+        "datePublished": "2018",
+        "publisher": { "@type": "CollegeOrUniversity", "name": "University of Waterloo" }
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://georgejacob.ca/#paper-manifolds",
+        "name": "Fitting Smooth Manifolds to Point Clouds in a Level Set Formulation",
+        "author": { "@id": "https://georgejacob.ca/#person" },
+        "datePublished": "2019",
+        "isPartOf": {
+          "@type": "PublicationEvent",
+          "name": "International Conference on Image Analysis and Recognition (ICIAR)"
+        },
+        "pagination": "139-149"
       },
       {
         "@type": "WebSite",
@@ -172,6 +221,7 @@
           <li><a href="#experience" class="nav__link">Experience</a></li>
           <li><a href="#projects" class="nav__link">Projects</a></li>
           <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#writing" class="nav__link">Writing</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
@@ -210,6 +260,7 @@
     <section class="section about" id="about">
       <div class="container">
         <h2 class="section__title reveal">About Me</h2>
+        <p class="about__lead reveal">George Jacob is a Senior Engineering Manager at Faire, based in Waterloo, Canada, where he leads the platform team behind the company's developer-productivity tooling. He architected Faire's in-house autonomous coding-agent platform, drove continuous deployment to 98% of its services, and authored its company-wide AI engineering-productivity strategy. He holds an M.A.Sc. from the University of Waterloo and a B.Tech from NIT Calicut.</p>
         <div class="about__grid reveal">
           <div class="about__text">
             <figure class="about__portrait">
@@ -424,6 +475,10 @@
             </div>
             <h3 class="project-card__title">AI Engineering-Productivity Strategy</h3>
             <p class="project-card__desc">Authored Faire's multi-quarter AI engineering-productivity strategy — a build/wrap/buy investment framework and a capability-based roadmap that composes vendor AI tools and internal systems into one end-to-end workflow, including the build-vs-buy thesis for the autonomous-agent platform.</p>
+            <a class="project-card__source" href="https://claude.com/blog/run-claude-code-sessions-on-your-own-compute" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>Anthropic — self-hosted environments for Claude Code</span>
+            </a>
             <div class="project-card__tags">
               <span class="tag">Technical Strategy</span>
               <span class="tag">AI Tooling</span>
@@ -517,6 +572,45 @@
               <span class="skill-pill">Hiring &amp; Leveling</span>
             </div>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing & Research -->
+    <section class="section writing" id="writing">
+      <div class="container">
+        <h2 class="section__title reveal">Writing &amp; Research</h2>
+
+        <div class="writing__list reveal">
+
+          <article class="writing-item">
+            <span class="tag writing-item__kind">Authored</span>
+            <div class="writing-item__body">
+              <h3 class="writing-item__title">How merge queues helped us stabilize our main branch</h3>
+              <p class="writing-item__desc">George Jacob on how Faire cut a main branch that was broken roughly 23% of the time — about 40 hours of lost developer time a month — down to a stable trunk, by queueing pull requests behind only the changes that touch the same code.</p>
+              <a class="writing-item__link" href="https://craft.faire.com/how-merge-queues-helped-us-stabilize-our-main-branch-081a50bc85b2" target="_blank" rel="noopener noreferrer">The Craft — Faire's engineering blog</a>
+              <p class="writing-item__credit">Built on <a href="https://trunk.io/" target="_blank" rel="noopener noreferrer">Trunk Merge</a>, by Trunk.io.</p>
+            </div>
+          </article>
+
+          <article class="writing-item">
+            <span class="tag writing-item__kind">Research</span>
+            <div class="writing-item__body">
+              <h3 class="writing-item__title">A HoloLens Framework for Augmented Reality Applications in Breast Cancer Surgery</h3>
+              <p class="writing-item__desc">George Poothicottu Jacob — M.A.Sc. thesis, University of Waterloo, 2018.</p>
+              <a class="writing-item__link" href="https://scholar.google.com/citations?user=81fERxcAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
+          </article>
+
+          <article class="writing-item">
+            <span class="tag writing-item__kind">Research</span>
+            <div class="writing-item__body">
+              <h3 class="writing-item__title">Fitting Smooth Manifolds to Point Clouds in a Level Set Formulation</h3>
+              <p class="writing-item__desc">H. Soleimani, George Poothicottu Jacob, O. V. Michailovich — International Conference on Image Analysis and Recognition (ICIAR), 2019, pp. 139–149.</p>
+              <a class="writing-item__link" href="https://scholar.google.com/citations?user=81fERxcAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
+          </article>
 
         </div>
       </div>
