@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>George Jacob — Resume</title>
+<style>
+  @page { size: A4; margin: 11mm 14mm 10mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Bitstream Charter", "Charter", Georgia, serif; font-size: 9.5pt; line-height: 1.28; color: #111; margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; margin-bottom: 7pt; }
+  h1 { font-size: 19pt; font-weight: bold; margin: 0 0 3pt; letter-spacing: 0.2pt; }
+  .contact { margin: 0 0 3pt; }
+  .tagline { margin: 0; font-style: italic; }
+  h2 { font-size: 11pt; font-variant: small-caps; letter-spacing: 0.4pt; margin: 8pt 0 3.5pt; padding-bottom: 1.5pt; border-bottom: 0.7pt solid #111; }
+  p { margin: 0; }
+  .summary { text-align: left; }
+  .skills { margin: 0; padding: 0; list-style: none; }
+  .skills li { margin: 0 0 1.5pt; }
+  .skills b { display: inline-block; min-width: 0; }
+  .role { margin: 0 0 6pt; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .row .left b { font-size: 10pt; }
+  .row .right { white-space: nowrap; padding-left: 8pt; }
+  .sub { font-style: italic; }
+  ul.bullets { margin: 2pt 0 0; padding-left: 13pt; }
+  ul.bullets li { margin: 0 0 1.6pt; text-align: justify; }
+  .edu { margin-bottom: 3pt; }
+</style>
+</head>
+<body>
+<header>
+  <h1>George Poothicottu Jacob, M.A.Sc.</h1>
+  <p class="contact">georgejakes@gmail.com &nbsp;|&nbsp; Waterloo, ON, Canada &nbsp;|&nbsp; <a href="https://georgejacob.ca">georgejacob.ca</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/georgepjacob">linkedin.com/in/georgepjacob</a> &nbsp;|&nbsp; Open to relocation</p>
+  <p class="tagline">Senior Engineering Manager &nbsp;|&nbsp; Developer Productivity &amp; Agentic Coding Platforms</p>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">Engineering leader with 8+ years building developer-productivity infrastructure used by hundreds of engineers: development environments, build systems, continuous deployment, and autonomous coding agents. At Faire I manage the Agentic Foundations pod (six direct reports) and authored the company-wide AI engineering-productivity strategy. Before moving into management I was the staff engineer who architected Faire's in-house autonomous coding-agent platform and its sandbox runtime, took continuous deployment to 98% of services, and led the rollout of cloud development environments. I build with AI agents daily and still work hands-on in the systems my team owns.</p>
+
+<h2>Experience</h2>
+<div class="role">
+  <div class="row"><span class="left"><b>Senior Engineering Manager</b>, Faire</span><span class="right">Apr 2026 – Present</span></div>
+  <div class="sub">Agentic Foundations pod (previously Code Authoring)</div>
+  <ul class="bullets">
+    <li>Manage a team of six direct reports; designed a rotational co-ownership model so that no system depends on a single owner.</li>
+    <li>Authored Faire's company-wide AI engineering-productivity strategy: a build/wrap/buy investment framework and a capability roadmap that composes vendor AI tools with internal systems into one end-to-end workflow.</li>
+    <li>Architected and own an in-house autonomous coding-agent platform (publicly cited as Samurai), and set the build-vs-buy strategy to migrate it onto maturing vendor tooling.</li>
+    <li>Leading the org-wide rollout of cloud agentic-coding interfaces, including Claude, on an active-active model that keeps multiple agent backends interchangeable and avoids lock-in to a single vendor.</li>
+    <li>Led a cross-vendor AI-spend governance program (tiered approvals, identity-based spend limits, burn alerting) and shipped the supporting IAM configuration.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><span class="left"><b>Staff Software Engineer</b>, Faire</span><span class="right">Feb 2021 – Apr 2026</span></div>
+  <div class="sub">Developer Productivity, Dev Environments &amp; Agentic Coding Platforms</div>
+  <ul class="bullets">
+    <li>Took an inherited continuous-deployment MVP to general availability as the paved-path workflow for 98% of services, doubling per-service deploy frequency; built a DSL for service owners, integrated Argo Rollouts on Kubernetes, and added multi-region (EU/NA) fail-safes.</li>
+    <li>Led the multi-org rollout of cloud development environments and built the developer CLI behind them (one-command startup, sandbox lifecycle, automatic work-in-progress backup, direct IDE launch), cutting onboarding from days to minutes with ~3× ROI in pilot evaluations.</li>
+    <li>Built the agent-execution runtime from scratch in Python: a profile-based workflow engine, a layered tool-permission isolation model, pluggable model backends (MCP), session continuation, and structured streaming output.</li>
+    <li>Took ownership of an in-house build plugin, overhauled its developer UX, and drove adoption to ~30% of backend engineers, cutting monorepo build times by 40%.</li>
+    <li>Drove build-systems and inner-loop strategy across a large monorepo: a Kotlin 2.0 migration, a Bazel and hermetic-build evaluation, and the build-topology direction for hundreds of engineers.</li>
+  </ul>
+</div>
+<div class="role">
+  <div class="row"><span class="left"><b>Software Engineer</b>, Magnet Forensics</span><span class="right">Feb 2018 – Dec 2020</span></div>
+  <div class="sub">CI &amp; Build Performance</div>
+  <ul class="bullets">
+    <li>Cut product build times by 66% through targeted CI optimization, build caching, and parallelization.</li>
+    <li>Designed a multi-stage installer validation pipeline that increased release stability and enabled faster QA sign-off.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<ul class="skills">
+  <li><b>Leadership &amp; Strategy:</b> engineering management, technical strategy, build-vs-buy, AI-spend governance, cross-org alignment, hiring and leveling, design docs</li>
+  <li><b>AI Agents &amp; Agentic Coding:</b> autonomous coding-agent platforms, agent orchestration, tool-permission isolation, MCP, vendor-agnostic model backends, LLM evaluation, Claude Code</li>
+  <li><b>Dev Environments &amp; Build:</b> cloud dev environments, ephemeral/leased sandboxes, Gradle, Bazel, hermetic builds, build caching, BuildKite, Jenkins</li>
+  <li><b>Deployment &amp; Cloud:</b> continuous deployment, Argo Rollouts, Kubernetes, Docker, Terraform, AWS (EC2, ECR, SQS, Kinesis), Datadog</li>
+  <li><b>Languages:</b> Kotlin, Python, TypeScript, Groovy, SQL, C#</li>
+</ul>
+
+<h2>Education</h2>
+<div class="edu row"><span class="left"><b>M.A.Sc., Electrical &amp; Computer Engineering</b>, University of Waterloo, Waterloo, ON</span><span class="right">Jan 2016 – Feb 2018</span></div>
+<div class="edu row"><span class="left"><b>B.Tech., Computer Science &amp; Engineering</b>, NIT Calicut, Kerala, India</span><span class="right">Jul 2011 – May 2015</span></div>
+</body>
+</html>
